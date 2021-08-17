@@ -1,0 +1,54 @@
+/**
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for eight different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE: 
+ *	@include r(240)  { }
+ *	@include r(320)  { }
+ *	@include r(480)  { }
+ *	@include r(768)  { }
+ *	@include r(1024) { }
+ *	@include r(1140) { }
+ *	@include r(1280) { }
+ *	@include r(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include r(320)  { display: none; }
+ * }
+ *
+ * @author Ahmad Awais (https://github.com/ahmadawais)
+ */
+ @mixin r( $point ) {
+	@if $point=='xs' {
+		@media ( min-width: 0 ) {
+			@content;
+		}
+	}
+	@if $point=='sm' {
+		@media ( min-width: 576px ) {
+			@content;
+		}
+	}
+	@if $point=='md' {
+		@media ( min-width: 768px ) {
+			@content;
+		}
+	}
+	@if $point=='lg' {
+		@media ( min-width: 992px ) {
+			@content;
+		}
+	}
+	@if $point=='xl' {
+		@media ( min-width: 1200px ) {
+			@content;
+		}
+	}
+}

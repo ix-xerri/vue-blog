@@ -7,24 +7,34 @@
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  @import 'styles/media-queries.scss';
 
-#nav {
-  padding: 30px;
+  $green: green;
+  $blue: blue;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: $green;
+    margin-top: 60px;
 
-    &.router-link-exact-active {
-      color: #42b983;
+    @include r('md') {
+      color: $blue;
     }
   }
-}
+
+  #nav {
+    padding: 30px;
+
+    a {
+      font-weight: bold;
+      color: #2c3e50;
+
+      &.router-link-exact-active {
+        color: #42b983;
+      }
+    }
+  }
 </style>
