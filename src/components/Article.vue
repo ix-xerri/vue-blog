@@ -28,8 +28,8 @@ export default {
   },
   created() {
     this.$store.dispatch('post', this.id);
-    this.$store.dispatch('comments', this.post.userId);
-    this.$store.dispatch('user', 1);
+    this.$store.dispatch('comments', this.id);
+    this.$store.dispatch('user', this.post.userId);
   },
   computed: {
     ...mapGetters(['comments', 'post', 'user']),
