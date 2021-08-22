@@ -9,11 +9,10 @@
 
 <style lang="scss">
   @import 'styles/variables.scss';
+  @import 'styles/reset.scss';
 
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     color: $color-dark;
     margin-top: 60px;
   }
