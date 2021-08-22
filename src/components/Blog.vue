@@ -40,6 +40,11 @@ export default {
 
   .blog-title {
     text-transform: capitalize;
+
+    a {
+      color: $color-tertiary;
+      text-decoration: none;
+    }
   }
 
   .blog-user {

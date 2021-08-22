@@ -39,7 +39,19 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+  @import '../styles/variables.scss';
+  @import '../styles/media-queries.scss';
+
+  .title {
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+
+    @include r('md') {
+      border-bottom: 1px dotted $color-medium;
+    }
+  }
+
   .comment {
     padding: 10px 20px;
     font-style: italic;
