@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col-md-12">
         <div id="articles">
+          <small class="user">{{ user.name }}</small>
           <div class="article">
             <h2 class="title">{{ post.title }}</h2>
             <div class="body">{{ post.body }}</div>
@@ -28,9 +29,10 @@ export default {
   created() {
     this.$store.dispatch('post', this.id);
     this.$store.dispatch('comments', this.id);
+    this.$store.dispatch('user', 1);
   },
   computed: {
-    ...mapGetters(['comments', 'post']),
+    ...mapGetters(['comments', 'post', 'user']),
   },
 };
 </script>

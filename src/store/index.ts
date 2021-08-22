@@ -7,12 +7,14 @@ export default createStore({
     posts: [],
     post: {},
     comments: [],
+    user: [],
   },
 
   getters: {
     posts: (state) => state.posts,
     post: (state) => state.post,
     comments: (state) => state.comments,
+    user: (state) => state.user,
   },
 
   mutations: {
@@ -24,6 +26,9 @@ export default createStore({
     },
     comments: (state, payload) => {
       state.comments = payload;
+    },
+    user: (state, payload) => {
+      state.user = payload;
     },
   },
   actions: {
@@ -51,6 +56,16 @@ export default createStore({
       axios.get(`http://jsonplaceholder.typicode.com/post/${id}/comments`)
         .then((response) => {
           context.commit('comments', response.data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
+
+    user: (context, id) => {
+      axios.get(`http://jsonplaceholder.typicode.com/users/${id}`)
+        .then((response) => {
+          context.commit('user', response.data);
         })
         .catch((error) => {
           console.error(error);
