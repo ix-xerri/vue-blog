@@ -1,9 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <div v-for='post in posts' :key='post.id'>
-  <h3>Post Title: </h3>  {{post.title}}
-      <h3>Post Body: </h3>  {{post.body}}
+    <div class="blog-post" v-for='post in posts' :key='post.id'>
+      <p class="blog-user"><small>{{post.userId}}</small></p>
+      <h3 class="blog-title">{{post.title}}</h3>
+      <p>{{post.body}}</p>
     </div>
     <h2>Essential Links</h2>
   </div>
@@ -22,6 +23,22 @@ export default {
   },
   mounted() {
     this.$store.dispatch('getPosts');
+    this.$store.dispatch('getUsers');
   },
 };
 </script>
+<style lang="scss">
+  @import '../styles/variables.scss';
+
+  .blog-post {
+    border-bottom: 1px solid $color-medium;
+  }
+
+  .blog-title {
+    text-transform: capitalize;
+  }
+
+  .blog-user {
+    color: $color-medium;
+  }
+</style>
