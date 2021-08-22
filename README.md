@@ -1,4 +1,6 @@
-# blog
+# Parallels Blog
+
+A simple blog (MVP), developed over two days to experiment with VUE and VUEX.
 
 ## Project setup
 ```
@@ -19,6 +21,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
