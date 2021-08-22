@@ -28,7 +28,7 @@ export default {
   },
   created() {
     this.$store.dispatch('post', this.id);
-    this.$store.dispatch('comments', this.id);
+    this.$store.dispatch('comments', this.post.userId);
     this.$store.dispatch('user', 1);
   },
   computed: {
