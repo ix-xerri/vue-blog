@@ -1,0 +1,87 @@
+$color-primary: #25707B;
+$color-primary-rgb: 37, 112, 123;
+$color-primary-contrast: #ffffff;
+$color-primary-contrast-rgb: 255, 255, 255;
+$color-primary-shade: #21636c;
+$color-primary-tint: #3b7e88;
+
+/** secondary **/
+$color-secondary: #F8A400;
+$color-secondary-rgb: 248, 164, 0;
+$color-secondary-contrast: #000000;
+$color-secondary-contrast-rgb: 0, 0, 0;
+$color-secondary-shade: #da9000;
+$color-secondary-tint: #f9ad1a;
+$color-secondary-fade: #ffebc4;
+
+/** tertiary **/
+$color-tertiary: #5bc0de;;
+$color-tertiary-rgb: 91, 192, 222;
+$color-tertiary-contrast: #ffffff;
+$color-tertiary-contrast-rgb: 255, 255, 255;
+$color-tertiary-shade: #50a9c3;
+$color-tertiary-tint: #6bc6e1;
+$color-tertiary-fade: #9bcad8;
+
+/** success **/
+$color-success: var($color-primary);
+$color-success-rgb: var($color-primary-rgb);
+$color-success-contrast: var($color-primary-contrast);
+$color-success-contrast-rgb: var($color-primary-contrast-rgb);
+$color-success-shade: var($color-primary-shade);
+$color-success-tint: var($color-primary-tint);
+
+/** warning **/
+$color-warning: #ffce00;
+$color-warning-rgb: 255, 206, 0;
+$color-warning-contrast: #ffffff;
+$color-warning-contrast-rgb: 255, 255, 255;
+$color-warning-shade: #e0b500;
+$color-warning-tint: #ffd31a;
+
+/** danger **/
+$color-danger: #f04141;
+$color-danger-rgb: 245, 61, 61;
+$color-danger-contrast: #ffffff;
+$color-danger-contrast-rgb: 255, 255, 255;
+$color-danger-shade: #d33939;
+$color-danger-tint: #f25454;
+
+/** dark **/
+$color-dark: #222428;
+$color-dark-rgb: 34, 34, 34;
+$color-dark-contrast: #ffffff;
+$color-dark-contrast-rgb: 255, 255, 255;
+$color-dark-shade: #1e2023;
+$color-dark-tint: #383a3e;
+
+/** medium **/
+$color-medium: #989aa2;
+$color-medium-rgb: 152, 154, 162;
+$color-medium-contrast: #ffffff;
+$color-medium-contrast-rgb: 255, 255, 255;
+$color-medium-shade: #86888f;
+$color-medium-tint: #a2a4ab;
+
+/** light **/
+$color-light: #f4f5f8;
+$color-light-rgb: 244, 244, 244;
+$color-light-contrast: #000000;
+$color-light-contrast-rgb: 0, 0, 0;
+$color-light-shade: #d7d8da;
+$color-light-tint: #f5f6f9;
+
+/** validation **/
+$color-validation: #ffe3df;
+$color-validation-rgb: 255,227,223;
+$color-validation-contrast: #000000;
+$color-validation-contrast-rgb: 0,0,0;
+$color-validation-shade: #e0c8c4;
+$color-validation-tint: #ffe6e2;
+
+$color-pink-lace: #FFE8FF;
+$color-pink-lace-rgb: 255,232,255;
+$color-pink-lace-contrast: #000000;
+$color-pink-lace-contrast-rgb: 0,0,0;
+$color-pink-lace-shade: #e0cce0;
+$color-pink-lace-tint: #ffeaff;
