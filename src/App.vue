@@ -6,6 +6,17 @@
   </div>
   <router-view/>
 </template>
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  watch: {
+    $route(to, from) {
+      document.title = to.meta.title || 'Your Website';
+    },
+  },
+});
+</script>
 
 <style lang="scss">
   @import 'styles/variables.scss';
