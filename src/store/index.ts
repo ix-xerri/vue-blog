@@ -53,7 +53,7 @@ export default createStore({
     },
 
     comments: (context, id) => {
-      axios.get(`http://jsonplaceholder.typicode.com/post/${id}/comments`)
+      axios.get(`http://jsonplaceholder.typicode.com/posts/${id}/comments`)
         .then((response) => {
           context.commit('comments', response.data);
         })
@@ -66,6 +66,7 @@ export default createStore({
       axios.get(`http://jsonplaceholder.typicode.com/users/${id}`)
         .then((response) => {
           context.commit('user', response.data);
+          console.log(response.data);
         })
         .catch((error) => {
           console.error(error);

@@ -2,7 +2,6 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <div class="blog-post" v-for='post in posts' :key='post.id'>
-      <p class="blog-user"><small>{{post.userId}}</small></p>
       <h3 class="blog-title">
         <router-link :to="'/blog/'+ post.id">
           {{ post.title }}
@@ -29,7 +28,6 @@ export default {
   },
   mounted() {
     this.$store.dispatch('posts');
-    // this.$store.dispatch('getUsers');
   },
 };
 </script>

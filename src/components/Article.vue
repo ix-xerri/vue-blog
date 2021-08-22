@@ -3,7 +3,9 @@
     <div class="row">
       <div class="col-md-12">
         <div id="articles">
-          <small class="user">{{ user.name }}</small>
+          <router-link :to="'/user/'+ user.id">
+            <small class="user">{{ user.name }}</small>
+          </router-link>
           <div class="article">
             <h2 class="title">{{ post.title }}</h2>
             <div class="body">{{ post.body }}</div>

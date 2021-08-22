@@ -28,8 +28,13 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/blog/:postId',
-    name: 'blog-post',
+    name: 'Post',
     component: () => import(/* webpackChunkName: "about" */ '../components/Article.vue'),
+  },
+  {
+    path: '/user/:userId',
+    name: 'User',
+    component: () => import(/* webpackChunkName: "about" */ '../components/User.vue'),
   },
 ];
 
