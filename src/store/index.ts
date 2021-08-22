@@ -2,32 +2,59 @@ import { createStore } from 'vuex';
 import axios from 'axios';
 
 export default createStore({
+  strict: true,
   state: {
     posts: [],
-    users: [],
+    post: {},
+    comments: [],
   },
+
+  getters: {
+    posts: (state) => state.posts,
+    post: (state) => state.post,
+    comments: (state) => state.comments,
+  },
+
   mutations: {
-    SET_POSTS(state, posts) {
-      state.posts = posts;
+    posts: (state, payload) => {
+      state.posts = payload;
     },
-    SET_USERS(state, users) {
-      state.users = users;
+    post: (state, payload) => {
+      state.post = payload;
+    },
+    comments: (state, payload) => {
+      state.comments = payload;
     },
   },
   actions: {
-    getPosts({ commit }) {
-      axios.get('https://jsonplaceholder.typicode.com/posts')
+    posts: (context) => {
+      axios.get('http://jsonplaceholder.typicode.com/posts')
         .then((response) => {
-          commit('SET_POSTS', response.data);
+          context.commit('posts', response.data);
+        })
+        .catch((error) => {
+          console.error(error);
         });
     },
-    getUsers({ commit }) {
-      axios.get('https://jsonplaceholder.typicode.com/users')
+
+    post: (context, id) => {
+      axios.get(`http://jsonplaceholder.typicode.com/posts/${id}`)
         .then((response) => {
-          commit('SET_USERS', response.data);
+          context.commit('post', response.data);
+        })
+        .catch((error) => {
+          console.error(error);
         });
     },
-  },
-  modules: {
+
+    comments: (context, id) => {
+      axios.get(`http://jsonplaceholder.typicode.com/post/${id}/comments`)
+        .then((response) => {
+          context.commit('comments', response.data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
   },
 });

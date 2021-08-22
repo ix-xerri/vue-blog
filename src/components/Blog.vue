@@ -3,16 +3,19 @@
     <h1>{{ msg }}</h1>
     <div class="blog-post" v-for='post in posts' :key='post.id'>
       <p class="blog-user"><small>{{post.userId}}</small></p>
-      <h3 class="blog-title">{{post.title}}</h3>
+      <h3 class="blog-title">
+        <router-link :to="'/blog/'+ post.id">
+          {{ post.title }}
+        </router-link>
+      </h3>
       <p>{{post.body}}</p>
     </div>
-    <h2>Essential Links</h2>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'myStore',
+  name: 'blog',
   data() {
     return { msg: 'Parallels - Blog' };
   },
@@ -20,10 +23,13 @@ export default {
     posts() {
       return this.$store.state.posts;
     },
+    users() {
+      return this.$store.state.users;
+    },
   },
   mounted() {
-    this.$store.dispatch('getPosts');
-    this.$store.dispatch('getUsers');
+    this.$store.dispatch('posts');
+    // this.$store.dispatch('getUsers');
   },
 };
 </script>

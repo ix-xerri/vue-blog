@@ -12,7 +12,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   watch: {
     $route(to, from) {
-      document.title = to.meta.title || 'Your Website';
+      document.title = to.meta.title || 'Parallels';
     },
   },
 });
