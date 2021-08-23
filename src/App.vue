@@ -20,6 +20,7 @@ export default defineComponent({
 
 <style lang="scss">
   @import 'styles/variables.scss';
+  @import 'styles/typography.scss';
   @import 'styles/reset.scss';
 
   #app {

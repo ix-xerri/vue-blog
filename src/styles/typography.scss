@@ -1,0 +1,16 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none; 
+	margin: 0; 
+}
+
+h3 {
+	font-weight: 200;
+	color: var(--ion-color-medium);
+	width: 100%;
+}
+
+h5 {
+	font-size: 14px;
+	color: var(--ion-color-medium);
+}
