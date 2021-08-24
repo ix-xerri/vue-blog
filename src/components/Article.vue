@@ -28,10 +28,11 @@ export default {
   data() {
     return { id: this.$route.params.postId };
   },
-  created() {
-    this.$store.dispatch('post', this.id);
+  async created() {
+    const post = await this.$store.dispatch('post', this.id);
+    this.$store.dispatch('user', post.data.userId);
+
     this.$store.dispatch('comments', this.id);
-    this.$store.dispatch('user', this.post.userId);
   },
   computed: {
     ...mapGetters(['comments', 'post', 'user']),

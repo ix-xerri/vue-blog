@@ -42,15 +42,17 @@ export default createStore({
         });
     },
 
-    post: (context, id) => {
+    post: (context, id) => new Promise((resolve, reject) => {
       axios.get(`http://jsonplaceholder.typicode.com/posts/${id}`)
         .then((response) => {
           context.commit('post', response.data);
+          resolve(response);
         })
         .catch((error) => {
           console.error(error);
+          reject(error);
         });
-    },
+    }),
 
     comments: (context, id) => {
       axios.get(`http://jsonplaceholder.typicode.com/posts/${id}/comments`)
